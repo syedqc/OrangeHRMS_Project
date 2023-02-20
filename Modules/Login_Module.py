@@ -84,8 +84,6 @@ class login_scenario(unittest.TestCase):
         else:
             print("Test Fail")
 
-    def TearDown(self):
-        driver.close()
 
     def test_forget_pwd(self):
         driver.find_element(By.XPATH, "//p[@class='oxd-text oxd-text--p orangehrm-login-forgot-header']").click()
@@ -100,6 +98,13 @@ class login_scenario(unittest.TestCase):
             print("Test Pass-Reset PWD displayed")
         else:
             print("Test Fail-not displayed report issue")
+
+
+    def TearDown(self):
+        driver.close()
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
