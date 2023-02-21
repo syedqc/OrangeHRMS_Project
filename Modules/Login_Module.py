@@ -19,6 +19,7 @@ class login_scenario(unittest.TestCase):
         driver.implicitly_wait(5)
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
+
     # both valid
     def test_login_valid(self):
         driver.find_element(By.XPATH, "//input[@name='username']").send_keys("Admin")
@@ -100,8 +101,8 @@ class login_scenario(unittest.TestCase):
             print("Test Fail-not displayed report issue")
 
 
-    def TearDown(self):
-        driver.close()
+def TearDown(self):
+    driver.close()
 
 
 
